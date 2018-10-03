@@ -86,17 +86,20 @@ class Burger:
 def gauss(x, x0, sigma ):
     return np.exp( -(x-x0)*(x-x0)/2/sigma/sigma )
 
-b = Burger( 1500, -3, 4, 0, 0.5 )
-b.setInitConditions( gauss, 0.0, 1.0 )
-ax = b.plot()
-b.evolve(1.0)
-b.plot(ax)
-b.evolve(2.0)
-b.plot(ax)
-b.evolve(3.0)
-b.plot(ax)
 
-plt.show()
+if __name__=='__main__':
+    
+    b = Burger( 1500, -3, 4, 0, 0.5 )
+    b.setInitConditions( gauss, 0.0, 1.0 )
+    ax = b.plot()
+    b.evolve(1.0)
+    b.plot(ax)
+    b.evolve(2.0)
+    b.plot(ax)
+    b.evolve(3.0)
+    b.plot(ax)
+
+    plt.show()
 
 
 
